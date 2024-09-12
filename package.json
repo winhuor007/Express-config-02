@@ -7,7 +7,7 @@
     "tsoa:gen": "tsoa spec && tsoa routes",
     "dev": "yarn tsoa:gen && nodemon src/server.ts",
     "build": "node build-script.js",
-    "start:local": "pm2 restart ecosystem.config.local.js || pm2 start ecosystem.config.local.js",
+    "start:local": "node ./build/server.js",
     "start": "pm2 start ecosystem.config.js",
     "restart": "pm2 reload ecosystem.config.js",
     "db:insert": "ts-node src/database/scripts/insert-data.ts",
@@ -18,6 +18,7 @@
     "express": "^4.19.2",
     "joi": "^17.13.3",
     "mongoose": "^8.6.1",
+    "pm2": "^5.4.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {

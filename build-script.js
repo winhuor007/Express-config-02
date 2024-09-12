@@ -18,11 +18,11 @@ esbuild
       copy({
         assets: {
           from: [
-            "../node_modules/swagger-ui-dist/*.css",
-            "../node_modules/swagger-ui-dist/*.js",
-            "../node_modules/swagger-ui-dist/*.png",
+            "./node_modules/swagger-ui-dist/*.css",
+            "./node_modules/swagger-ui-dist/*.js",
+            "./node_modules/swagger-ui-dist/*.png",
           ],
-          to: ["./public/swagger-assets"], // Copy assets to a public folder
+          to: ["./"], // Copy assets to a public folder
         },
       }),
     ],
